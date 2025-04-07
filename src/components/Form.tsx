@@ -26,6 +26,20 @@ const Form = ({onNewSub}: FormProps) => {
         })
     }
 
+    const handleFileChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+        const file = evt.target.files?.[0];
+        if (file) {
+            const imageUrl = URL.createObjectURL(file);
+            dispatch({
+                type: "change_value",
+                payload: {
+                    inputName: "avatar",
+                    inputValue: imageUrl,
+                },
+            });
+        }
+    };
+
     const handleClear = () => {
         dispatch({type:"clear"})
     }
@@ -40,7 +54,7 @@ const Form = ({onNewSub}: FormProps) => {
                     <option value='mujer'>mujer</option>
                     <option value='hombre'>hombre</option>
                 </select>
-                <input onChange={handleChange} value={inputValues.avatar} type="text" name="avatar" placeholder="avatar" />
+                <input onChange={handleFileChange} type="file" name="avatar" accept="image/*" />
                 <textarea onChange={handleChange} value={inputValues.description} name="description" placeholder="description" />
                 <label>Aceptas los terminos y condiciones?</label>
                 <input type="checkbox" name="check" onChange={handleChange}/>
