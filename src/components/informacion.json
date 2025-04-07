@@ -1,0 +1,26 @@
+[
+    {
+        "nick": "Madigans",
+        "months": 3,
+        "profileUrl": "https://img.freepik.com/vector-gratis/avatar-personaje-empresario-aislado_24877-60111.jpg",
+        "description": "Madigans es mid-senior en Patreon",
+        "sexo": "Hombre",
+        "privacidad": "si"
+    },
+        {
+        "nick": "Tictools",
+        "months": 6,
+        "profileUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ddwT9XSpbzDvua0Kmepfg4AfB0eQ69Tkqw&usqp=CAU",
+        "description": "Tictools era profe!",
+        "sexo": "Mujer",
+        "privacidad": "si"
+    },
+        {
+        "nick": "Reddo",
+        "months": 3,
+        "profileUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMGpptnKrAOOz8ZSKCARE_FlX9hgCymbXhdQ&usqp=CAU",
+        "description": "Reddo! Es hacer dos veces",
+        "sexo": "Hombre",
+        "privacidad": "si"
+    }
+]
