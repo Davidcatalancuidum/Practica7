@@ -15,7 +15,7 @@ const Form = ({onNewSub}: FormProps) => {
         dispatch({ type: "clear" })
     }
 
-    const handleChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>{
+    const handleChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>{
         const {name, value} = evt.target
         dispatch({
             type: "change_value",
@@ -35,8 +35,15 @@ const Form = ({onNewSub}: FormProps) => {
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} value={inputValues.nick} type="text" name="nick" placeholder="nick" />
                 <input onChange={handleChange} value={inputValues.subMonths} type="number" name="subMonths" placeholder="subMonths" />
+                <select onChange={handleChange} value={inputValues.sexo} name="sexo">
+                    <option value=''>-- seleccione --</option>
+                    <option value='mujer'>mujer</option>
+                    <option value='hombre'>hombre</option>
+                </select>
                 <input onChange={handleChange} value={inputValues.avatar} type="text" name="avatar" placeholder="avatar" />
                 <textarea onChange={handleChange} value={inputValues.description} name="description" placeholder="description" />
+                <label>Aceptas los terminos y condiciones?</label>
+                <input type="checkbox" name="check" onChange={handleChange}/>
                 <button onClick={handleClear} type="button">Clear the form</button>
                 <button type="submit">Save new sub!</button>
             </form>

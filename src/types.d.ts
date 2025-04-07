@@ -2,7 +2,9 @@ export interface Sub{
     nick: string
     avatar: string
     subMonths: number
+    sexo: string
     description?: string
+    check: string
 }
 
 export type SubsResponseFromApi = Array<{
@@ -11,5 +13,5 @@ export type SubsResponseFromApi = Array<{
     profileUrl: string
     description: string
     sexo: string
-    privacidad: any
+    check: string
 }>

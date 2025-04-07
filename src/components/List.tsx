@@ -5,6 +5,8 @@ interface Props {
     onDeleteSub: (nick: string) => void
 }
 
+
+
 const List = ({ subs, onDeleteSub }: Props) => {
     const renderList = () => {
         return subs.map(sub => {
@@ -28,7 +30,9 @@ const List = ({ subs, onDeleteSub }: Props) => {
                     </button>
                     <img src={sub.avatar} alt={`Avatar for ${sub.nick}`} />
                     <h4>{sub.nick} (<small>{sub.subMonths}</small>)</h4>
+                    <p>{sub.sexo}</p>
                     <p>{sub.description?.substring(0, 100)}</p>
+                    <p>{sub.check=='false' ? '❌ Terminos y condiciones no aceptados ❌' : '✅ Terminos y condiciones aceptados ✅'}</p>
                 </li>
             )
         })

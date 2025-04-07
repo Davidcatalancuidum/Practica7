@@ -20,6 +20,8 @@ const INITIAL_STATE = {
     subMonths: 0,
     avatar: '',
     description: '',
+    sexo: '',
+    check: 'false',
 }
 
 const formReducer = (state: FormState["inputValues"], action: FormReducerAction) => {

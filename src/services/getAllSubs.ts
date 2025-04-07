@@ -17,6 +17,8 @@ const mapFromApiToSubs = (apiResponse: SubsResponseFromApi):
         profileUrl: avatar,
         nick,
         description,
+        sexo,
+        check,
         } = subFromApi
 
         return {
@@ -24,6 +26,8 @@ const mapFromApiToSubs = (apiResponse: SubsResponseFromApi):
         description,
         avatar,
         subMonths,
+        sexo,
+        check,
         }
     })
 }
