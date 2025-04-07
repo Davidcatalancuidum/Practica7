@@ -23,7 +23,7 @@ function App() {
     getAllSubs().then(allSubs =>{
       setSubs(allSubs);
       setSubsNumber(allSubs.length)
-      
+      setNewSubsNumber(allSubs.length);
     });
   },[])
 
@@ -32,10 +32,14 @@ function App() {
     setNewSubsNumber(n => n + 1 )
   }
 
+  const handleDeleteSub = (nickToDelete: string): void => {
+    setSubs(subs => subs.filter(sub => sub.nick !== nickToDelete));
+  };
+
   return (
     <div className="App" ref={divRef}>
       <h1>midu subs</h1>
-      <List subs={subs} />
+      <List subs={subs} onDeleteSub={handleDeleteSub}/>
       New subs: {newSubsNumber}
       <Form onNewSub={handleNewSub}/>
     </div>
